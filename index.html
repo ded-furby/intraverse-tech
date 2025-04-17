@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>INTRAVERSE | Launch Fast. Think Big.</title>
+
+  <!-- Favicons -->
+  <link rel="icon" href="favicons/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png" />
+  <link rel="manifest" href="favicons/site.webmanifest" />
+  <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#ffffff" />
+
+  <!-- Inter font (as on huly.io) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Existing CSS & JS -->
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/all.min.css" />
+  <script src="https://unpkg.com/framer-motion@10.16.4/dist/framer-motion.js" defer></script>
+  <script src="https://cdn.tailwindcss.com" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+
+  <!-- Apply Inter globally -->
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body>
+  <!-- Pixelated Cursor Setup -->
+  <div class="cursor-follower"></div>
+  <div class="cursor-animation">
+    <div class="cursor-trail"></div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="logo"><a href="./">INTRAVERSE</a></div>
+    <nav>
+      <ul>
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content text-center">
+      <h1 class="animated-text">Any Tech Solution.<br>Delivered In A Week</h1>
+      <p>Bridging digital innovation with practical solutions. We transform concepts into cutting-edge technology that drives your business forward.</p>
+      <a href="#contact" class="cta-button">Get Started</a>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <div class="section-header">
+      <h2>Our Services</h2>
+      <p>We offer a comprehensive range of tech solutions tailored to your needs</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="icon"><i class="fas fa-globe"></i></div>
+        <h3>Website Development</h3>
+        <p>Custom-designed responsive websites optimized for performance and user experience. Includes expert UI/UX design to create intuitive, engaging interfaces.</p>
+        <div class="card-hover-content">
+          <div class="tech-stack">HTML5 • CSS3 • JavaScript • React</div>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="icon"><i class="fas fa-mobile-alt"></i></div>
+        <h3>Mobile Applications</h3>
+        <p>Native and cross-platform apps that deliver exceptional user experiences. Complete with polished UI/UX design for seamless mobile interaction.</p>
+        <div class="card-hover-content">
+          <div class="tech-stack">React Native • Flutter • Swift • Kotlin</div>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="icon"><i class="fas fa-chart-line"></i></div>
+        <h3>Admin Dashboards</h3>
+        <p>Intuitive admin panels and dashboards to manage your business efficiently. Designed with user-centered UI/UX principles for operational clarity.</p>
+        <div class="card-hover-content">
+          <div class="tech-stack">Vue • Angular • Material UI • Data Visualization</div>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="icon"><i class="fas fa-robot"></i></div>
+        <h3>AI Solutions</h3>
+        <p>Custom AI implementations to automate and optimize your business processes. Human-centered UI/UX ensures AI tools are accessible and user-friendly.</p>
+        <div class="card-hover-content">
+          <div class="tech-stack">TensorFlow • PyTorch • ML Ops • NLP</div>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="icon"><i class="fas fa-cogs"></i></div>
+        <h3>API Development</h3>
+        <p>Robust and scalable APIs to connect your systems and services. Integrated with streamlined developer UX for efficient implementation.</p>
+        <div class="card-hover-content">
+          <div class="tech-stack">REST • GraphQL • Node.js • Django</div>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="icon"><i class="fas fa-paint-brush"></i></div>
+        <h3>UI/UX Design</h3>
+        <p>Elevated user experiences through meticulous interface design. We transform complex interactions into intuitive, aesthetically pleasing experiences.</p>
+        <div class="card-hover-content">
+          <div class="tech-stack">Figma • Adobe XD • Sketch • User Research</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="section-header">
+      <h2>Who We Are</h2>
+      <p>Pioneering the digital frontier with innovation and expertise</p>
+    </div>
+    <div class="about-content">
+      <div class="about-text">
+        <div class="about-grid">
+          <div class="about-grid-item">
+            <h3><span class="highlight">01</span> Our Vision</h3>
+            <p>At INTRAVERSE, we envision a world where technology seamlessly integrates with human experience, creating solutions that are both powerful and intuitive.</p>
+          </div>
+          <div class="about-grid-item">
+            <h3><span class="highlight">02</span> Our Approach</h3>
+            <p>We combine strategic thinking with technical excellence, delivering solutions that are forward‑thinking and scalable.</p>
+          </div>
+          <div class="about-grid-item">
+            <h3><span class="highlight">03</span> Our Promise</h3>
+            <p>Rapid delivery without compromise—your concept to production in under a week.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="about-stats-grid">
+      <div class="stat">
+        <span class="counter">400+</span>
+        <p>Projects Completed</p>
+      </div>
+      <div class="stat">
+        <span class="counter">100%</span>
+        <p>Client Satisfaction</p>
+      </div>
+      <div class="stat">
+        <span class="counter">7</span>
+        <p>Days Delivery</p>
+      </div>
+      <div class="stat">
+        <span class="counter">14+</span>
+        <p>Countries Served</p>
+      </div>
+      <div class="stat">
+        <span class="counter">50+</span>
+        <p>Global Partners</p>
+      </div>
+      <div class="stat">
+        <span class="counter">11+</span>
+        <p>Strong Team</p>
+      </div>
+      <div class="story-card">
+        <h3><span class="highlight">04</span> Our Story</h3>
+        <p>Either go all in for something or don't; that is the energy which drives the venture.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="section-header">
+      <h2>Get in Touch</h2>
+      <p>Tell us about your project and we'll get back to you quickly</p>
+    </div>
+    <div class="contact-form-container">
+      <form id="contactForm" class="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <input type="text" id="name" name="name" placeholder=" " required>
+            <label for="name">Name</label>
+            <div class="form-line"></div>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="email" placeholder=" " required>
+            <label for="email">Email</label>
+            <div class="form-line"></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="tel" id="phone" name="phone" placeholder=" " required>
+            <label for="phone">Phone Number</label>
+            <div class="form-line"></div>
+        </div>
+        <div class="form-group">
+          <textarea id="requirements" name="requirements" placeholder=" " required></textarea>
+          <label for="requirements">Project Requirements</label>
+          <div class="form-line"></div>
+        </div>
+        <button type="submit" class="submit-button">
+          <span>Get a Quote</span>
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-message">
+        <h2>INTRAVERSE</h2>
+        <p>This might be the end of our website, but we're committed to working tirelessly on your vision until it becomes reality.</p>
+      </div>
+      <div class="footer-info">
+        <p class="location"><i class="fas fa-map-marker-alt"></i> Sydney, Australia</p>
+        <p class="copyright">&copy; 2025 INTRAVERSE Technologies Private Limited</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div id="quoteModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h2>Thank You!</h2>
+      <p>We've received your request. Keep an eye on your email—you'll hear from us soon.</p>
+      <div class="success-checkmark">
+        <div class="check-icon">
+          <span class="icon-line line-tip"></span>
+          <span class="icon-line line-long"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Your main JS -->
+  <script src="script.js"></script>
+</body>
+</html>
