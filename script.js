@@ -6,7 +6,7 @@ import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js
 // ─── Supabase Configuration ────────────────────────────────────────────────────
 const SUPABASE_URL = 'https://xirmvfisugusybcktlqf.supabase.co';
 const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhpcm12ZmlzdWd1c3liY2t0bHFmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQwODA4MjAsImV4cCI6MjA1OTY1NjgyMH0.TtTyRVAR1olHUM3Yf5o0OOlps_9bF2uJY_Vnk0VLrbY'; 
-const supabase    = createClient(supabaseUrl, supabaseKey);
+const supabase    = createClient(SUPABASE_URL, SUPABASE_KEY);
 
 // ─── MAIN ENTRY ─────────────────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
